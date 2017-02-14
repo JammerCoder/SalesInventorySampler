@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Sales Inventory System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Basic Sales Inventory System</title>
 </head>
 
-<body data-ng-app="">
-    {{1+1}}
+<body data-ng-app="MainApp">
+    <div class="container">
+        <div class="container-fluid">
+            <h1 class="heading">Basic Sales Inventory System</h1>
+            <a href="#!/productsentry">Products Entry</a> &nbsp; <a href="#!/products">Products List</a> &nbsp; <a href="#!/salesentry">Sales Entry</a>
+            <hr/>
+        </div>
+        
+        <div data-ng-view=""></div>
+    </div>
+
+
 </body>
 </html>
 <link rel="stylesheet" href="/Core/library/Styles/boostrap/css/bootstrap.css">
 <script src="/Core/library/Scripts/jquery-3.1.1.js"></script>
 <script src="/Core/library/Styles/boostrap/js/bootstrap.min.js"></script>
 <script src="/Core/library/Scripts/angular-1.6.1/angular.js"></script>
+<script src="Core/library/Scripts/angular-1.6.1/angular-route.js"></script>
+<script src="Core/project/scripts/ngApp.js"></script>
+<script src="/Core/project/scripts/controllers/mainController.js"></script>
+<script src="/Core/project/scripts/controllers/productsController.js"></script>
+<script src="/Core/project/scripts/configs/routeConfig.js"></script>
