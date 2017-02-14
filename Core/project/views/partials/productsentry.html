@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="panel panel-primary">
+        <div class="panel-heading"><strong class="heading">Products Entry Form</strong></div>
+        <div class="panel-body">
+            <div class="input-group"> <span class="input-group-addon" id="productcode">Code</span>
+                <input type="text" class="form-control" placeholder="product code" data-ng-model="newProduct.ProductCode"> </div><br/>
+            <div class="input-group"> <span class="input-group-addon" id="productname">Name</span>
+                <input type="text" class="form-control" placeholder="product name" data-ng-model="newProduct.FriendlyName"> </div><br/>
+            <div class="form-group">
+                <label for="ProductDescription">Product Description</label>
+                <textarea class="form-control" id="ProductDescription" rows="3" data-ng-model="newProduct.Description" placeholder="product description"></textarea>
+            </div>
+            <div class="input-group"> <span class="input-group-addon" id="barcode">Barcode</span>
+                <input type="text" class="form-control" placeholder="barcode" data-ng-model="newProduct.BarCode"> </div><br/>
+            <div class="input-group"> <span class="input-group-addon" id="barcode">Qty</span>
+                <input type="text" class="form-control" placeholder="qty" data-ng-model="newProduct.Qty"> </div><br/>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-group" role="group" aria-label="ActionButtons">
+                <button type="button" class="btn btn-primary" id="btnNewProductSave" data-ng-click="addNewProduct()">{{btnNewProductSave}}</button>
+                <button type="button" class="btn btn-primary" id="btnNewProductCancel" data-ng-click="cancelAdd()">{{btnNewProductCancel}}</button>
+            </div>
+        </div>
+    </div>
