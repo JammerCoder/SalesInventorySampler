@@ -15,7 +15,13 @@ function ProductsDataFactory(){
          BarCode:'4800581157300', 
          FriendlyName:'EAGLE MS300 MARKER BLACK', 
          Description: 'Eagle MS300 Marker Black', 
-         Qty: 20}
+         Qty: 20},
+        {Id: '3', 
+         ProductCode:'MASTER001', 
+         BarCode:'4806789446826', 
+         FriendlyName:'MASTER ACTIVE DEEP CLEANER', 
+         Description: 'WHITENING W/ PAPAYA EXTRACT AND ZEROIL', 
+         Qty: 19}
     ];
     
     factory.getAllProducts = function() {
