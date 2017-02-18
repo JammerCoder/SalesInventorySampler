@@ -21,7 +21,19 @@ function ProductsDataFactory(){
          BarCode:'4806789446826', 
          FriendlyName:'MASTER ACTIVE DEEP CLEANER', 
          Description: 'WHITENING W/ PAPAYA EXTRACT AND ZEROIL', 
-         Qty: 19}
+         Qty: 19},
+        {Id: '4', 
+         ProductCode:'LIPYLTEA', 
+         BarCode:'8888086021001', 
+         FriendlyName:'LIPTON YELLOW LABEL TEA', 
+         Description: 'LIPTON YELLOW LABEL TEA INTERNATIONAL BLEND', 
+         Qty: 14},
+        {Id: '5', 
+         ProductCode:'EMIHSM', 
+         BarCode:'4800112010630', 
+         FriendlyName:'EMI HOUSEHOLD SAFETY MATCHES', 
+         Description: 'EMI HOUSEHOLD SAFETY MATCHES', 
+         Qty: 100}
     ];
     
     factory.getAllProducts = function() {
