@@ -4,6 +4,8 @@ angular
 
 function ProductsController($scope,ProductsDataFactory){
     
+    init($scope);
+    
     var df = ProductsDataFactory;
    
     $scope.btnNewProductSave = "Save";
@@ -11,16 +13,24 @@ function ProductsController($scope,ProductsDataFactory){
     
     $scope.products = getProducts(df);
     
-    $scope.addNewProduct = function(){
-        $scope.products.push({
-            Id: '...', 
-            ProductCode: $scope.newProduct.ProductCode, 
-            BarCode: $scope.newProduct.BarCode, 
-            FriendlyName: $scope.newProduct.FriendlyName, 
-            Description: $scope.newProduct.Description, 
-            Qty: $scope.newProduct.Qty
-        });
-        clearEntry();
+    $scope.addNewProduct = function(valid){
+        if(valid){
+            console.log('Saved!')
+            $scope.products.push({
+                Id: '...', 
+                ProductCode: $scope.newProduct.ProductCode, 
+                BarCode: $scope.newProduct.BarCode, 
+                FriendlyName: $scope.newProduct.FriendlyName, 
+                Description: $scope.newProduct.Description, 
+                Qty: $scope.newProduct.Qty
+            });
+            clearEntry();    
+        }else{
+           console.log('Saving failed!') 
+        }
+        
+        
+        
     };
     
     $scope.cancelAdd = function(){
@@ -38,4 +48,7 @@ function getProducts(df){
     return df.getAllProducts();
 }
 
+function init($scope){
+    $scope.newProduct = {};
+}
 
